@@ -29,10 +29,13 @@ body {
     font-size: 12px;
     font-family: 'Poppins', sans-serif;
     /* Include the appropriate font-weight declarations if needed */
+    min-height: 100vh;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    min-height: 100vh;
+    margin-left:20px ;
+   
 }
 
 
