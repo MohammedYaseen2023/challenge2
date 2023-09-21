@@ -5,59 +5,63 @@
     --color-accent-blue: hsl(248, 32%, 49%);
     --color-neutral-dark-blue: hsl(249, 10%, 26%);
     --color-neutral-grayish-blue: hsl(246, 25%, 77%);
-  }
+    --color-white: hsl(0, 0%, 100%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
 * {
     margin: 0px;
     /* display: flex; */
-    box-sizing: border-box;
 
+    box-sizing: border-box;
 }
-body{
+
+body {
     background-color: var(--color-primary-red);
-    height: 100vh;
-    display: flex;
+    /* height: 100vh; */
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     background-image: url(../images/bg-intro-desktop.png);
 
-    
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    /* Include the appropriate font-weight declarations if needed */
+
 }
+
 
 main {
     /* height: 100%;
     width: 100%; */
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+    margin: 0;
 }
 
 
 .textside {
     width: 50%;
     height: 50%;
-    padding: 30px;
-
-
-
+    padding: 12px;
+    text-align: center;
 }
 
 .textside h3 {
-    color: aliceblue;
-    font-size: 20px;
-    font-weight: 100;
-
-
-
+    color: white;
+    font-size: 16px;
+     padding: 8px;
+    
 }
 
 
 .learn-Text {
-    color: aliceblue;
+    color: white;
     font-size: 40px;
-    font-weight: 900;
 
 }
 
@@ -67,48 +71,48 @@ main {
     width: 50%;
     height: 100%;
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px;
 }
 
 
 .registerbox {
-    background-color: aliceblue;
+    background-color: white;
     padding: 10px;
-     height: 100%; 
+    height: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-      margin: 5px;
-      gap: 20px;
-  
-    /* max-width: 1000px; */
-    /* max-height: 600px; */
-    
+    justify-content:center;
+    margin: 5px;
+    gap: 12px;
 }
 
 
 .tryitfree {
-    background-color: #5d54a3;
-    /* width: 50%;  */
-    height: 25px;
-    /* margin: 5px 0px ; */
+    background-color: var(--color-accent-blue);
     border-radius: 6px;
     text-align: center;
     margin: 3px;
-     padding: 5px;
+    padding: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .registerbox input {
-padding: 20px;
+    padding: 15px;
 
 }
+
 .titlespan {
-    color: rgb(255, 0, 144);
+    color: var(--color-neutral-grayish-blue);
     font-size: 10px;
 }
 
-button{
-
+button {
+    background-color: var(--color-primary-green);
+    padding: 10px;
+    color: var(--color-white);
+    font-size: 12px;
 }
 
 .reg_agreement {
@@ -118,7 +122,7 @@ button{
 
 .terms-color {
     padding: 10px;
-    color: red;
+    color: var(--color-primary-red);
     font-size: 12px;
 }
 
@@ -127,9 +131,86 @@ button{
 .attribution {
     font-size: 11px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--color-accent-blue);
 }
+
+
+/* -----responsive ------------------ */
+@media(max-width:425px) {
+
+    main {
+
+        flex-direction: column;
+
+    }
+
+    body {
+        flex-direction: column;
+
+        background-image: url(../images/bg-intro-mobile.png);
+
+        /* Include the appropriate font-weight declarations if needed */
+
+    }
+
+
+    .textside {
+        width: 70vh;
+        height: 100%;
+        padding: 20px;
+        
+
+    }
+
+    .learn-Text {
+        color: white;
+        font-size: 36px;
+       
+    }
+
+    .textdtl h3{
+        font-size: 10px;
+        text-align: center;
+        
+    }
+
+    .register-side {
+
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .registerbox input {
+        padding: 10px;
+        color: var(--color-neutral-grayish-blue);
+
+    }
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 4px;
+    }
+
+    .reg_agreement {
+        color: #cfcdd9;
+        font-size: 8px;
+        padding-left: 4px;
+    }
+    
+    .terms-color {
+        padding: 10px;
+        color: var(--color-primary-red);
+        font-size: 10px;
+    }
+
+   
+
+}
+
