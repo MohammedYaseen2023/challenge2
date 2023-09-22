@@ -188,6 +188,7 @@ button {
         /* height: 100%; */
         
         padding: 10px;
+        background-color: blue;
     }
 
     .registerbox input {
